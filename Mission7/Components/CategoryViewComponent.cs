@@ -17,7 +17,7 @@ namespace Mission7.Components
 
         public IViewComponentResult Invoke()
         {
-            ViewBag.SelectedCategory = RouteData?.Values["ProjectType"];
+            ViewBag.SelectedCategory = RouteData?.Values["BookCategory"];
 
             var category = repo.Books
                 .Select(x => x.Category)

@@ -32,7 +32,7 @@ namespace Mission7.Infrastructure
 
         public string PageClass { get; set; }
         public bool PageClassesEnabled { get; set; }
-        public string PageClassSelcted { get; set; }
+        public string PageClassSelected { get; set; }
 
         public override void Process (TagHelperContext thc, TagHelperOutput tho)
         {
@@ -49,7 +49,7 @@ namespace Mission7.Infrastructure
                 if (PageClassesEnabled)
                 {
                     tb.AddCssClass(PageClass);
-                    tb.AddCssClass(i == MyPage.CurrentPage ? PageClassSelcted : PageClassNormal);
+                    tb.AddCssClass(i == MyPage.CurrentPage ? PageClassSelected : PageClassNormal);
                 }
                 tb.AddCssClass(PageClass);
                 tb.InnerHtml.Append(i.ToString());
